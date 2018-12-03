@@ -1,3 +1,4 @@
+@import 'flex';
 
 /*============================================================================
   Grid Breakpoints and Class Names
@@ -10,38 +11,33 @@ $grid-medium: 750px;
 $grid-large: 1200px;
 
 /* Set the maximum width of any content contained witin a div with the class 'wrapper' */
-$grid-widescreen: 1200px;
+$content-max: 1200px;
 
-/* Set base grid gutter */
-$grid-gutter:15px;
-
-
-/*============================================================================
-  Start flexboxgrid
-==============================================================================*/
-@import 'flex';
 // Set the number of columns you want to use on your layout.
 $grid-columns: 12 !default;
+
 // Set the gutter between columns.
 $flexboxgrid-gutter-width: 1rem !default;
+
 // Set a margin for the container sides.
 $flexboxgrid-outer-margin: 2rem !default;
+
 // Create or remove breakpoints for your project
 // Syntax:
 // name SIZErem,
 $breakps:
   md $grid-medium,
   lg $grid-large;
-
 //
 // -- Stop editing -- //
 //
+
 $gutter-compensation: $flexboxgrid-gutter-width * .5 * -1;
 $half-gutter-width: $flexboxgrid-gutter-width * .5;
 
 .wrapper, .container {
   box-sizing: border-box;
-  max-width: $grid-widescreen;
+  max-width: $content-max;
   margin: 0 auto;
 }
 
@@ -170,29 +166,6 @@ $name: sm;
   text-align: center !important;
 }
 
-.pair-gutter-first-#{$name} {
- padding-left: $grid-gutter !important;
- padding-right: $grid-gutter / 2  !important;
-}
-
-.pair-gutter-last-#{$name} {
- padding-left:  $grid-gutter / 2  !important;
- padding-right: $grid-gutter !important;
-}
-
-.left-gutter-#{$name} {
- padding-left: $grid-gutter !important;
-}
-
-.right-gutter-#{$name}{
- padding-right: $grid-gutter !important;
-}
-
-.both-gutters-#{$name} {
-padding-left: $grid-gutter !important;
-padding-right: $grid-gutter !important;
-}
-
 @each $breakp in $breakps {
   $name: nth($breakp, 1);
   $size: nth($breakp, 2);
@@ -284,29 +257,6 @@ padding-right: $grid-gutter !important;
     .text-center-#{$name} {
       text-align: center !important;
     }
-
-    .pair-gutter-first-#{$name} {
-     padding-left: $grid-gutter !important;
-     padding-right: $grid-gutter / 2  !important;
-   }
-
-    .pair-gutter-last-#{$name} {
-     padding-left:  $grid-gutter / 2  !important;
-     padding-right: $grid-gutter !important;
-   }
-
-   .left-gutter-#{$name} {
-     padding-left: $grid-gutter !important;
-   }
-
-   .right-gutter-#{$name}{
-     padding-right: $grid-gutter !important;
-   }
-
-   .both-gutters-#{$name} {
-    padding-left: $grid-gutter !important;
-    padding-right: $grid-gutter !important;
-   }
 
   }
 }
