@@ -114,8 +114,29 @@
   order: 1;
 }
 
+// Smart Show displays back to inline block or flex
 .show {
   display: block !important;
+}
+
+p.show, span.show, a.show, i.show {
+  display: inline !important;
+}
+
+div.show {
+  display: inline !important;
+}
+
+div.col.show {
+  display: inline !important;
+}
+
+div.row.show {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -moz-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .hide {
@@ -217,8 +238,29 @@
       order: 1;
     }
 
+    // Smart Show displays back to inline block or flex
     .show-#{$name} {
       display: block !important;
+    }
+
+    p.show-#{$name}, span.show-#{$name}, a.show-#{$name}, i.show-#{$name} {
+      display: inline !important;
+    }
+
+    div.show-#{$name} {
+      display: inline !important;
+    }
+
+    div.col.show-#{$name} {
+      display: inline !important;
+    }
+
+    div.row.show-#{$name} {
+      display: -webkit-box !important;
+      display: -webkit-flex !important;
+      display: -moz-flex !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
     }
 
     .hide-#{$name} {
