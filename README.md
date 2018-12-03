@@ -6,7 +6,7 @@ Introduction goes here.
 
 1. Add this extension to your Gemfile with this line:
   ```ruby
-  gem 'spree_flexbox_grid', github: '[your-github-handle]/spree_flexbox_grid'
+  gem 'spree_flexbox_grid', github: 'matthewkennedy/spree_flexbox_grid'
   ```
 
 2. Install the gem using Bundler:
@@ -18,8 +18,9 @@ Introduction goes here.
   ```ruby
   bundle exec rails g spree_flexbox_grid:install
   ```
+4. In your new spree project search and replace ```col-sm``` with ```col``` and then search and remove instances of ```col-xs-6```
 
-4. Restart your server
+5. Restart your server
 
   If your server was running, restart it so that it can find the assets properly.
 

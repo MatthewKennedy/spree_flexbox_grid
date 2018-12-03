@@ -1,8 +1,4 @@
-@import 'flex';
 @import 'flexbox_grid_settings';
-
-$gutter-compensation: $flexboxgrid-gutter-width * .5 * -1;
-$half-gutter-width: $flexboxgrid-gutter-width * .5;
 
 .wrapper, .container {
   box-sizing: border-box;
@@ -67,12 +63,13 @@ $half-gutter-width: $flexboxgrid-gutter-width * .5;
   }
 }
 
-// IMPORTANT MUST BE AFTER MAIN CYCLE
+// IMPORTANT
 .col {
   @include flex-grow(1);
   @include flex-basis(0);
   max-width: 100%;
 }
+// IMPORTANT
 
 .start {
   @include justify-content(flex-start);
@@ -143,6 +140,14 @@ $half-gutter-width: $flexboxgrid-gutter-width * .5;
 
   @media only screen and (min-width: $size) {
 
+    .row.reverse-#{$name} {
+      @include flex-direction(row-reverse);
+    }
+
+    .col.reverse-#{$name} {
+      @include flex-direction(column-reverse);
+    }
+
     .col-#{$name} {
       @include flexboxgrid-sass-col-common;
       @include flex-basis(auto);
@@ -160,13 +165,14 @@ $half-gutter-width: $flexboxgrid-gutter-width * .5;
         margin-left: 100% / $grid-columns * $i
       }
     }
-    
-// IMPORTANT MUST BE AFTER MAIN CYCLE
+
+// IMPORTANT
     .col-#{$name} {
       @include flex-grow(1);
       @include flex-basis(0);
       max-width: 100%;
     }
+// IMPORTANT
 
     .start-#{$name} {
       @include justify-content(flex-start);

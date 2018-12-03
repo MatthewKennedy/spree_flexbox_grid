@@ -1,7 +1,9 @@
-/*============================================================================
-  Grid Breakpoints and Class Names
-    - Do not change the variable names
-==============================================================================*/
+@import 'flex';
+
+//
+// -- Start editing -- //
+//
+
 /* Set the maximum width of any content contained witin a div with the class 'wrapper' */
 $content-max: 1200px;
 
@@ -16,7 +18,14 @@ $flexboxgrid-outer-margin: 2rem !default;
 
 // Create or remove breakpoints for your project
 // Syntax:
-// name SIZErem,
+// name 750px,
 $breakps:
   md 750px,
   lg 1200px;
+
+//
+// -- Stop editing -- //
+//
+
+$gutter-compensation: $flexboxgrid-gutter-width * .5 * -1;
+$half-gutter-width: $flexboxgrid-gutter-width * .5;
