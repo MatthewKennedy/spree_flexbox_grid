@@ -7,10 +7,6 @@ module SpreeFlexboxGrid
         inject_into_file 'vendor/assets/stylesheets/spree/frontend/all.css', " *= require spree/frontend/spree_flexbox_grid\n", before: %r{\*\/}, verbose: true
       end
 
-      def add_migrations
-        run 'bundle exec rake railties:install:migrations FROM=spree_flexbox_grid'
-      end
-      
     end
   end
 end
