@@ -1,36 +1,5 @@
 @import 'flex';
-
-/*============================================================================
-  Grid Breakpoints and Class Names
-    - Do not change the variable names
-==============================================================================*/
-/* Set the breakepoint between small and medium size devices (phones and tablets) */
-$grid-medium: 750px;
-
-/* Set the breakepoint between medium and large (tablets and desktop) */
-$grid-large: 1200px;
-
-/* Set the maximum width of any content contained witin a div with the class 'wrapper' */
-$content-max: 1200px;
-
-// Set the number of columns you want to use on your layout.
-$grid-columns: 12 !default;
-
-// Set the gutter between columns.
-$flexboxgrid-gutter-width: 1rem !default;
-
-// Set a margin for the container sides.
-$flexboxgrid-outer-margin: 2rem !default;
-
-// Create or remove breakpoints for your project
-// Syntax:
-// name SIZErem,
-$breakps:
-  md $grid-medium,
-  lg $grid-large;
-//
-// -- Stop editing -- //
-//
+@import 'flexbox_grid_settings';
 
 $gutter-compensation: $flexboxgrid-gutter-width * .5 * -1;
 $half-gutter-width: $flexboxgrid-gutter-width * .5;
